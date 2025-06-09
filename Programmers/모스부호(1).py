@@ -1,6 +1,5 @@
 letter = ".... . .-.. .-.. ---"
 
-
 def solution(letter):
     morse = { 
         '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
@@ -9,17 +8,7 @@ def solution(letter):
         '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
         '-.--':'y','--..':'z'
     }
-    m_index = []
-    a = -1
-    for i in letter :
-        a += 1
-        if i == " " :
-            m_index.append(a)
-    
-    
-
-    answer = ''
-    return answer
-
+    letter = letter.split()
+    return "".join(morse[i] for i in letter)
 
 print(solution(letter))
